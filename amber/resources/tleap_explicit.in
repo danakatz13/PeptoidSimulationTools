@@ -1,0 +1,17 @@
+source leaprc.gaff2
+source leaprc.water.tip3p
+set default PBRadii mbondi3
+loadAmberPrep 343.prepin
+loadAmberPrep 111.prepin
+loadAmberPrep 006.prepin
+loadAmberPrep 005.prepin
+loadAmberParams 343.frcmod
+loadAmberParams 111.frcmod
+loadAmberParams 006.frcmod
+loadAmberParams 005.frcmod
+
+x = loadPDB design_1.pdb
+bond x.5.C x.1.N
+solvatebox x TIP3PBOX 12.0
+saveAmberParm x design_1.parm7 design_1.rst7
+quit
