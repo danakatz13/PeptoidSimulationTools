@@ -2,13 +2,20 @@ source leaprc.gaff2
 set default PBRadii mbondi3
 loadAmberPrep 343.prepin
 loadAmberPrep 111.prepin
-loadAmberPrep 006.prepin
+loadAmberPrep 406.prepin
 loadAmberPrep 005.prepin
+loadAmberPrep 601.prepin
+loadAmberPrep 007.prepin
+loadAmberPrep 303.prepin
 loadAmberParams 343.frcmod
 loadAmberParams 111.frcmod
-loadAmberParams 006.frcmod
+loadAmberParams 406.frcmod
 loadAmberParams 005.frcmod
+loadAmberParams 601.frcmod
+loadAmberParams 007.frcmod
+loadAmberParams 303.frcmod
 
-x = loadPDB design_1.pdb
-saveAmberParm x design_1.parm7 design_1.rst7
+x = loadPDB design_8.pdb
+bond x.8.C x.1.N
+saveAmberParm x design_8.parm7 design_8.rst7
 quit
