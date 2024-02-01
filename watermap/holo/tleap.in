@@ -1,0 +1,19 @@
+source leaprc.gaff2
+source leaprc.protein.ff14SB
+source leaprc.water.tip3p
+set default PBRadii mbondi3
+loadAmberPrep 343.prepin
+loadAmberPrep 303.prepin
+loadAmberPrep 321.prepin
+loadAmberPrep 111.prepin
+loadAmberPrep 006.prepin
+loadAmberParams frcmod.343
+loadAmberParams frcmod.303
+loadAmberParams frcmod.321
+loadAmberParams frcmod.111
+loadAmberParams frcmod.006
+x = loadPDB complex.pdb
+bond x.264.CA x.260.N
+solvatebox x TIP3PBOX 8.0
+saveAmberParm x complex.parm7 complex.rst7
+quit
