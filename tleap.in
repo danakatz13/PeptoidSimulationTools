@@ -1,7 +1,0 @@
-source leaprc.protein.ff14SB
-source leaprc.water.tip3p
-set default PBRadii mbondi3
-prot = loadPDB cyclin_A_clean.pdb
-solvatebox prot TIP3PBOX 8.0
-saveAmberParm prot design_2.parm7 design_2.rst7
-quit
